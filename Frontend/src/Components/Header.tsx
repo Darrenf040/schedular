@@ -1,16 +1,56 @@
-import { Box, Typography } from "@mui/material";
+import { Avatar, Box, Input, OutlinedInput, Typography } from "@mui/material";
+import Button from "@mui/material/Button";
+
+import {
+  ArrowForward,
+  KeyboardDoubleArrowLeft,
+  ArrowBack,
+  Notifications,
+  Search,
+} from "@mui/icons-material";
+
 import React from "react";
 
 const Header = () => {
   return (
-    <Box className="px-20">
-      <Box className="flex">
-        <Typography variant="h6" component={"h1"}>
-          Logo
-        </Typography>
-        <span>+ </span>
-      </Box>
-      <Box></Box>
+    <Box className="border-b-2">
+      <header className="px-16 py-3 flex gap-4 justify-between items-center">
+        <Box className="flex items-center gap-2">
+          <Typography variant="h6" component={"h1"}>
+            Logo
+          </Typography>
+          <KeyboardDoubleArrowLeft />
+        </Box>
+        <Box className="flex">
+          <Box className="flex items-center gap-2">
+            <Box>
+              <Button>
+                <ArrowBack />
+              </Button>
+              <Button>
+                <ArrowForward />
+              </Button>
+            </Box>
+            <Box className="flex items-center gap-4">
+              <Typography variant="h4" component={"h1"}>
+                Januray 2025
+              </Typography>
+              <Input type="date" />
+            </Box>
+          </Box>
+        </Box>
+        <Box className="relative basis-1/4">
+          <OutlinedInput
+            sx={{ borderRadius: "20px", width: "100%" }}
+            type="search"
+          />
+          <Search className="absolute right-0 top-1/3" />
+        </Box>
+        <Box className="flex items-center gap-10">
+          <Avatar />
+          <Notifications />
+        </Box>
+      </header>
     </Box>
   );
 };
