@@ -4,7 +4,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <aside className="flex flex-col gap-10 w-[15%] h-full h-screen border-r-2 pl-16 py-8">
+    <aside className="flex flex-col gap-10 w-[15%] border-r-2 pl-16 py-8">
       <Box className="flex gap-3">
         <AccessTime />
         <Typography variant="body1">Schedule</Typography>

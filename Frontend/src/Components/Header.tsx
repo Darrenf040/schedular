@@ -9,7 +9,8 @@ import {
   Search,
 } from "@mui/icons-material";
 
-import React from "react";
+import { getTodaysDate } from "../Lib/day";
+import dayjs from "dayjs";
 
 const Header = () => {
   return (
@@ -33,9 +34,12 @@ const Header = () => {
             </Box>
             <Box className="flex items-center gap-4">
               <Typography variant="h4" component={"h1"}>
-                Januray 2025
+                {dayjs(getTodaysDate()).format("MMM YYYY")}
               </Typography>
-              <Input type="date" />
+              <Input
+                type="date"
+                onChange={(e) => console.log(e.target.value)}
+              />
             </Box>
           </Box>
         </Box>

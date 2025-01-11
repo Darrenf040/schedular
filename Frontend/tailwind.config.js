@@ -5,4 +5,8 @@ export default {
     extend: {},
   },
   plugins: [],
+  compilerOptions: {
+    esModuleInterop: true,
+    allowSyntheticDefaultImports: true,
+  },
 };
